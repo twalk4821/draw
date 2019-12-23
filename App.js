@@ -1,34 +1,37 @@
 import React from 'react';
-import ReactNative, {
-  SafeAreaView,
-  Text,
-  requireNativeComponent,
-  UIManager,
-  TouchableOpacity,
-} from 'react-native';
-const CanvasView = requireNativeComponent('CanvasView');
-const App = () => {
-  let _handle = null;
+import {SafeAreaView, StyleSheet, Button} from 'react-native';
+const {CanvasView, Modes} = require('react-native-canvas').default;
 
-  const onTap = () => {
-    UIManager.dispatchViewManagerCommand(_handle, 0, []);
+const style = StyleSheet.create({
+  container: {
+    width: 254,
+    height: 252,
+    borderColor: 'black',
+    borderWidth: 2,
+  },
+  canvas: {
+    flex: 1,
+    width: 250,
+    height: 250,
+  },
+});
+
+class App extends React.Component {
+  state = {
+    mode: Modes.DROP,
   };
-  return (
-    <>
-      <SafeAreaView>
-        <Text>Hello</Text>
-        <TouchableOpacity
-          style={{width: 200, height: 200, backgroundColor: 'blue'}}
-          onPress={onTap}>
-          <CanvasView
-            ref={ref => {
-              _handle = ReactNative.findNodeHandle(ref);
-            }}
-          />
-        </TouchableOpacity>
-      </SafeAreaView>
-    </>
-  );
-};
+
+  render() {
+    const {mode} = this.state;
+
+    return (
+      <>
+        <SafeAreaView style={style.container}>
+          <CanvasView style={style.canvas} mode={mode} />
+        </SafeAreaView>
+      </>
+    );
+  }
+}
 
 export default App;

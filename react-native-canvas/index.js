@@ -1,4 +1,2 @@
-import {requireNativeComponent} from 'react-native';
-
-const CanvasView = requireNativeComponent('CanvasView');
+const CanvasView = require('./CanvasView').default;
 export default CanvasView;
