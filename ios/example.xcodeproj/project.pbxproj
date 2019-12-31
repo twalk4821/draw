@@ -12,13 +12,13 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		23D2B39C68B95413997067A4 /* libPods-example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F76B433A96DF172D4A26B2C /* libPods-example.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* exampleTests.m */; };
 		2E67003FDA98BE642ECDD65D /* libPods-example-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB00473F64B7FAC7BF6A9D60 /* libPods-example-tvOS.a */; };
 		5B9FC6CDB2F7F67F839A15E4 /* libPods-exampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CC3843AA3030B5BCB9E8D2 /* libPods-exampleTests.a */; };
-		88F6E4E41E1CB532D8C5DEA1 /* libPods-example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F76B433A96DF172D4A26B2C /* libPods-example.a */; };
 		CD3B7E4F930BEEA5E93C28F3 /* libPods-example-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFC3A38C80722FAFB2A8E02 /* libPods-example-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88F6E4E41E1CB532D8C5DEA1 /* libPods-example.a in Frameworks */,
+				23D2B39C68B95413997067A4 /* libPods-example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +194,6 @@
 				03645B821671629CFF72C757 /* Pods-exampleTests.debug.xcconfig */,
 				0FD0D126573D624FF5B31D06 /* Pods-exampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +307,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -371,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		1CF8EDED666D3A6EB9219DE3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
